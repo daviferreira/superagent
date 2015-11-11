@@ -1321,7 +1321,7 @@ Request.prototype.end = function(fn){
 
   // send stuff
   this.emit('request', this);
-  xhr.send(data);
+  xhr.send(typeof data !== 'undefined' ? data : null);
   return this;
 };
 
